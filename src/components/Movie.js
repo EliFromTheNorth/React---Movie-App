@@ -1,6 +1,7 @@
 import "./Movie.css"
 import data from "../data"
 import DeleteButton from "./DeleteButton"
+import AllDeleteButton from "./AllDeleteButton"
 import { useState } from "react"
 
 const Movie = () => {
@@ -13,7 +14,12 @@ const Movie = () => {
       setMovieList(filteredMovies)
     }
 
-    return <div className="all-movies">
+    const deleteAllMovies = () => {
+      setMovieList([])
+    }
+
+    return <section>
+    <div className="all-movies">
       {
         data.map( (oneMovie) => {
             const {id, image, title, age, tags, description} = oneMovie
@@ -27,8 +33,12 @@ const Movie = () => {
                 <DeleteButton deleteMovie={ () => deleteOneMovie(id)}/>
             </div>
         })
-      }       
-    </div>
+      }   
+      </div>
+      <div>
+        <AllDeleteButton deleteMovies={deleteAllMovies}/>    
+      </div>
+    </section>
 } 
 
 export default Movie
