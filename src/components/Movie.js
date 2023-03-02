@@ -2,20 +2,25 @@ import "./Movie.css"
 import data from "../data"
 import DeleteButton from "./DeleteButton"
 import AllDeleteButton from "./AllDeleteButton"
+import ReloadMovieButton from "./ReloadMovieButton"
 import { useState } from "react"
 
 const Movie = () => {
     const [movieList, setMovieList] = useState(data)
 
-    const deleteOneMovie = (idecko) => {
+    const deleteOneMovie = (idNum) => {
       const filteredMovies = movieList.filter( (oneMovie) => {
-        return oneMovie.id !== idecko
+        return oneMovie.id !== idNum
       })
       setMovieList(filteredMovies)
     }
 
     const deleteAllMovies = () => {
       setMovieList([])
+    }
+
+    const reloadAllMovies = () => {
+      setMovieList(data)
     }
 
     return <section>
@@ -35,8 +40,9 @@ const Movie = () => {
         })
       }   
       </div>
-      <div>
+      <div className="button-box">
         <AllDeleteButton deleteMovies={deleteAllMovies}/>    
+        <ReloadMovieButton reloadMovies={reloadAllMovies}/>
       </div>
     </section>
 } 
