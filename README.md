@@ -6,6 +6,9 @@ Followed tutorials from czech YouTube channel "David Setek - Hackni svou budoucn
 
 https://www.youtube.com/@hacknisvoubudoucnost
 
+
 next steps:
+
 debugging (buttons functionality)
+
 API implementation
