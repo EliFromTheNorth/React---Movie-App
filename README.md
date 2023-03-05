@@ -11,4 +11,4 @@ next steps:
 
     debugging (buttons functionality)
   
-  API implementation
+    API implementation
