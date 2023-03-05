@@ -9,6 +9,6 @@ https://www.youtube.com/@hacknisvoubudoucnost
 
 next steps:
 
-  debugging (buttons functionality)
-
+    debugging (buttons functionality)
+  
   API implementation
